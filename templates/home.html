@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>california house price prediction</title>
 </head>
 <body>
-    <h1>hello world</h1>
+    <div class="login">
+    <h1>california house price prediction</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="MedInc" placeholder="MedInc" requires="required" /><br>
+        <input type="text" name="MHouseAge" placeholder="HouseAge" requires="required" /><br>
+        <input type="text" name="AveRooms" placeholder="AveRooms" requires="required" /><br>
+        <input type="text" name="AveBedrms" placeholder="AveBedrms" requires="required" /><br>
+        <input type="text" name="Population" placeholder="Population" requires="required" /><br>
+        <input type="text" name="AveOccup" placeholder="AveOccup" requires="required" /><br>
+        <input type="text" name="Latitude" placeholder="Latitude" requires="required" /><br>
+        <input type="text" name="Longitude" placeholder="Longitude" requires="required" /><br>
+        <input type="text" name="price" placeholder="price" requires="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict </button>
+    </form>
+    <br>
+    <br>
+    </div>
+    {{prediction_text}}
 </body>
 </html>
